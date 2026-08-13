@@ -1,0 +1,6 @@
+{
+  "name": "The Nexus Coaching Centre",
+  "description": "Official website and admission portal for The Nexus Coaching Centre (Campus-1) in Nazimabad, Karachi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
