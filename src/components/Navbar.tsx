@@ -28,10 +28,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInquiriesModal, inquiryCou
     { name: 'Home', href: '#' },
     { name: 'Programs', href: '#programs' },
     { name: 'Why Us', href: '#why-us' },
-    { name: 'Faculty', href: '#faculty' },
     { name: 'Fee Estimator', href: '#fee-estimator' },
-    { name: 'Location', href: '#location' },
-    { name: 'Reviews', href: '#reviews' },
   ];
 
   return (
@@ -73,21 +70,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInquiriesModal, inquiryCou
               <span>{CAMPUS_DETAILS.phoneDisplay}</span>
             </a>
 
-            {/* Inquiries Portal Drawer Button */}
-            <button
-              onClick={onOpenInquiriesModal}
-              className="relative flex items-center gap-1.5 text-xs font-semibold text-[#1a1a1a] bg-[#f2c94c]/20 hover:bg-[#f2c94c]/30 px-3 py-2 rounded-lg transition-colors border border-[#f2c94c]/40"
-              title="View Submitted Student Applications"
-            >
-              <FileText className="w-3.5 h-3.5 text-[#1a1a1a]" />
-              <span>Inquiries</span>
-              {inquiryCount > 0 && (
-                <span className="bg-[#1a1a1a] text-[#f2c94c] text-[10px] font-bold px-1.5 py-0.2 rounded-full min-w-[18px] text-center">
-                  {inquiryCount}
-                </span>
-              )}
-            </button>
-
             {/* Enroll Now CTA Button */}
             <a href="#inquiry" className="btn-primary py-2 px-4 text-xs font-bold">
               <span>Enroll Now</span>
@@ -97,19 +79,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInquiriesModal, inquiryCou
 
           {/* Mobile Actions & Menu Toggle */}
           <div className="flex lg:hidden items-center gap-2">
-            <button
-              onClick={onOpenInquiriesModal}
-              className="relative p-2 text-xs font-semibold text-[#1a1a1a] bg-[#f2c94c]/20 rounded-lg border border-[#f2c94c]/40"
-              title="View Inquiries"
-            >
-              <FileText className="w-4 h-4" />
-              {inquiryCount > 0 && (
-                <span className="absolute -top-1 -right-1 bg-[#1a1a1a] text-[#f2c94c] text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
-                  {inquiryCount}
-                </span>
-              )}
-            </button>
-
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 text-[#1a1a1a] rounded-lg hover:bg-[#f3f4f5] transition-colors"
